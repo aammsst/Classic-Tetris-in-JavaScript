@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded',() => {
 	draw();
     };
 
-   // rotate counter clockwise
+    // rotate counter clockwise
     function rotateCCW() {
 	undraw();
 	const rightEdge = current.some(index => (initialPos + index) % width === width - 1);
@@ -181,6 +181,17 @@ document.addEventListener('DOMContentLoaded',() => {
 	    rotateCCW();
 	};
     };
+
+    //touch control
+    grid.addEventListener("touchstart",e=>{
+	console.log(e.touches[0].clientX);
+	console.log(e.touches[0].screenX);
+    })
+
+    grid.addEventListener("touchend",e=>{
+	console.log(e.touches[0].clientX);
+	console.log(e.touches[0].screenX);
+    })
 
     //show up next tetromino in mini-grid
     const displaySq = document.querySelectorAll('.mini-grid div');

@@ -5,6 +5,7 @@ html{
 
 .instructions{
     color: #ebf6f7;
+    z-index: -1;
     font-size: 2rem;
     display: block;
     max-width: 30%;
