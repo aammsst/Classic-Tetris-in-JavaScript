@@ -165,10 +165,13 @@ document.addEventListener('DOMContentLoaded',() => {
     // move control
     function control(e) {
 	if(e.keyCode === 37) {
+	    e.preventDefault();
 	    moveLeft();
 	} else if (e.keyCode === 39) {
+	    e.preventDefault();
 	    moveRight();
 	}  else if (e.keyCode === 40) {
+	    e.preventDefault();
 	    moveDown();
 	};
     };
